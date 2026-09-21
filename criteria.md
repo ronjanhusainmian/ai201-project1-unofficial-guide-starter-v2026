@@ -25,6 +25,8 @@ contains the answer.
 **Why this target:**
 <!-- e.g. "One of my questions is about a topic only two documents mention, so
      I expect that one to be hard." -->
+I expect at least 4 of 5 because some questions may be harder to retrieve if the 
+relevant information is phrased differently from the question.
 
 ---
 
@@ -35,6 +37,8 @@ Every answer the system produces names at least one source document.
 **Why this target:**
 <!-- Why all five and not four? What about your setup makes that achievable —
      or what would have to go wrong for it not to be? -->
+I expect all 5 because the system is explicitly instructed to name the source 
+documents used to generate each answer.
 
 ---
 
@@ -52,10 +56,14 @@ in at least 4 of 5 tries.
 **Why this target:**
 <!-- What did your distances look like when you set the cutoff in Milestone 4?
      Was there a clean gap, or did the two groups overlap? -->
-
+I chose 4 of 5 because the relevance scores for in-corpus and out-of-corpus 
+questions may sometimes overlap near the cutoff, so one question may be 
+incorrectly allowed through.
 ---
 
 ## 4. Something about your chunks
+
+At least 4/5 of chunks are no less than 40 characters and no more than 600 characters.
 
 <!-- YOU WRITE THIS ONE.
 
@@ -72,12 +80,16 @@ in at least 4 of 5 tries.
 
 
 **Why this target:**
-
+I chose 40–600 characters because many documents in my corpus are very short, 
+so a higher minimum could exclude useful chunks, while chunks over 600 
+characters may combine unrelated information.
 
 
 ---
 
 ## 5. Your choice
+
+The system returns an answer within 5 seconds for at least 4/5 test questions.
 
 <!-- YOU WRITE THIS ONE TOO.
 
@@ -88,10 +100,10 @@ in at least 4 of 5 tries.
      outcome. -->
 
 
-
 **Why this target:**
-
-
+I chose 5 seconds for 4 of 5 questions because most queries should respond 
+quickly, while allowing one query to take longer due to variation in retrieval 
+or model response time.
 
 ---
 
