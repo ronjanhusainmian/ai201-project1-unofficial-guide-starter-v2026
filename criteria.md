@@ -63,7 +63,8 @@ incorrectly allowed through.
 
 ## 4. Something about your chunks
 
-At least 4/5 of chunks are no less than 40 characters and no more than 600 characters.
+At least 4 of 5 sampled chunks contain a complete thought that can be understood 
+without reading anything before or after it.
 
 <!-- YOU WRITE THIS ONE.
 
@@ -80,10 +81,8 @@ At least 4/5 of chunks are no less than 40 characters and no more than 600 chara
 
 
 **Why this target:**
-I chose 40–600 characters because many documents in my corpus are very short, 
-so a higher minimum could exclude useful chunks, while chunks over 600 
-characters may combine unrelated information.
-
+I chose 4 of 5 because the documents are short and mostly self-contained, 
+but some may contain information that depends on additional context.
 
 ---
 
