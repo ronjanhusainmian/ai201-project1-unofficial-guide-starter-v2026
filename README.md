@@ -20,6 +20,12 @@
 # Unit 1
 
 ## What This Does
+This project builds a RAG system that answers questions about campus life using
+a collection of student and administrative documents. It chunks and embeds the 
+documents, retrieves the most relevant information for a question, and uses a 
+relevance cutoff to reject questions the corpus cannot answer. The system then 
+generates answers using only the retrieved sources and cites the documents 
+used.
 
 <!-- Three or four sentences. Which corpus you picked, and the kinds of
      questions your system answers. Write it for someone who has never seen
@@ -166,9 +172,14 @@ from both.
 
      Milestone 5. -->
 
-**1.**
+**1.** I used AI to help make my acceptance criteria measurable. It suggested 
+specific numerical targets, and I adjusted them based on my corpus and the 
+results I observed.
 
-**2.**
+**2.** I used AI to review my chunking strategy and determine whether the 
+chunks contained enough context to answer questions independently. It helped 
+identify what makes a chunk too short or too broad, and I used that to choose 
+and evaluate my chunk sizes.
 
 <!-- ── Stretch features ─────────────────────────────────────────────────────
      Doing one? Say so here BEFORE you start. A feature this README never
