@@ -114,14 +114,24 @@ Laundry costs $1.75 wash, $1.75 dry, app-based. On noise: moderate; the building
 <!-- One complete question and answer, pasted as text, with the source line
      visible. Milestone 4. -->
 
-**Question:**
+**Question:**"How long into the semester can I drop a course?"
 
 **Answer:**
 
 ```
+You can drop a course through the end of week six. 
+
+Source: admin_add_drop_deadline.txt (also mentioned in admin_withdrawal_deadline.txt)
+
+Sources retrieved: admin_add_drop_deadline.txt, admin_grade_appeals.txt, admin_graduation_requirements.txt, admin_pass_fail_option.txt, admin_withdrawal_deadline.txt
 ```
 
-**My relevance cutoff:**
+**My relevance cutoff:** 0.65
+
+The in-corpus questions had best distances from 0.290 to 0.527, while the
+out-of-scope questions had best distances from 0.825 to 0.934. I chose 0.65
+because it falls clearly between the two groups while leaving some margin
+from both.
 
 <!-- The number you set in config.py, and how you got there.
 
@@ -134,7 +144,16 @@ Laundry costs $1.75 wash, $1.75 dry, app-based. On noise: moderate; the building
 
 | Question | In corpus? | Best distance |
 |---|---|---|
-|  |  |  |
+| "If I miss the normal deadline to declare my major, will I be penalized?" | Yes | 0.290 |
+| "How long into the semester can I drop a course?" | Yes | 0.324 |
+| "If I disagree with the final grade I received in a course, what process can I use to challenge it?" | Yes | 0.527 |
+| "If I want to take a class pass/fail instead of for a letter grade, what option should I use?" | Yes | 0.442 |
+| "If two students have the same number of credit hours in the housing lottery, how is their order decided?" | Yes | 0.353 |
+| "What is the capital of Mongolia?" | No | 0.825 |
+| "How do I change the oil in a diesel engine?" | No | 0.934 |
+| "Who won the 1994 World Cup?" | No | 0.886 |
+| "What is the recommended dosage of ibuprofen for a headache?" | No | 0.844 |
+| "How do I write a for loop in Rust?" | No | 0.896 |
 
 ## How I Used AI
 
