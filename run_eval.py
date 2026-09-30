@@ -37,6 +37,8 @@ import datetime as dt
 import sys
 from pathlib import Path
 
+import time
+
 import config
 import questions as qs
 
@@ -109,14 +111,22 @@ def main():
 
         run_results = []
         for run in range(1, args.runs + 1):
+            start = time.perf_counter()
+
             answer, results, decision = run_once(
                 question, top_k, threshold, corpus, args.variant
             )
+
+            elapsed = time.perf_counter() - start
             passed = judge(question, expects, answer, results) if judge else None
             run_results.append(passed)
 
             mark = {True: "pass", False: "fail", None: "—"}[passed]
-            print(f"  run {run}: {mark}  (best distance {decision.best_distance:.3f})")
+            print(
+                f"  run {run}: {mark}  "
+                f"(best distance {decision.best_distance:.3f}, "
+                f"time {elapsed:.2f}s)"
+            )
 
             transcript.append(
                 {
@@ -126,6 +136,7 @@ def main():
                     "sources": sorted({r.source for r in results}),
                     "best_distance": decision.best_distance,
                     "gate_passed": decision.passed,
+                     "elapsed": elapsed
                 }
             )
 
@@ -253,6 +264,7 @@ def write_report(rows, transcript, gate_rows, args, corpus, top_k, threshold, sc
             "",
             f"- Best distance: {entry['best_distance']:.4f} "
             f"({'passed' if entry['gate_passed'] else 'refused by'} the gate)",
+            f"- Response time: {entry['elapsed']:.2f} seconds",
             f"- Sources retrieved: {', '.join(entry['sources']) or 'none'}",
             "",
             "```",
