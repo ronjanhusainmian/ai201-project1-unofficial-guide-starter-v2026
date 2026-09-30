@@ -238,6 +238,7 @@ and evaluate my chunk sizes.
 | 5 | Answer returned within 5 seconds | MET | All 5 questions returned an answer within 5 seconds in all three runs. The slowest response was 2.38 seconds. |
 
 ## Diagnoses
+Diagnosis: I did not miss any of my five acceptance criteria. However, some of my original targets were fairly safe because the system exceeded all of them. I would tighten Criterion 1 from 4 of 5 to 5 of 5 retrieved answers containing the needed information, since all five questions consistently retrieved the correct information.
 
 <!-- For each miss: which stage caused it, and how. The stage alone isn't
      enough — you need the mechanism.
