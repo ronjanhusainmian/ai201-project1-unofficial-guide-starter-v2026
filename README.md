@@ -261,8 +261,13 @@ Diagnosis: I did not miss any of my five acceptance criteria. However, some of m
 ## The Improvement
 
 **What I changed:**
+I reduced TOP_K from 5 to 3, so the system retrieves three chunks for each 
+question instead of five.
 
 **Why I picked it:**
+My system met all five criteria while retrieving five chunks per question. 
+I wanted to see whether it could maintain the same results while retrieving 
+fewer chunks.
 
 <!-- Connect it to a specific diagnosis above in one sentence. If you can't,
      you picked a fix because it sounded impressive. -->
@@ -274,13 +279,18 @@ Diagnosis: I did not miss any of my five acceptance criteria. However, some of m
 
 | Criterion | Target | Run 1 | Run 2 | Run 3 | Verdict |
 |---|---|---|---|---|---|
-| 1. Retrieved chunk contains the answer | 4 of 5 |  |  |  |  |
-| 2. Every answer names a source | 5 of 5 |  |  |  |  |
-| 3. Gate stops out-of-corpus questions | 4 of 5 |  |  |  |  |
-| 4. | | | | | |
-| 5. | | | | | |
+| 1. Retrieved chunk contains the answer | 4 of 5 | 5/5 | 5/5 | 5/5 | MET |
+| 2. Every answer names a source | 5 of 5 | 5/5 | 5/5 | 5/5 | MET |
+| 3. Gate stops out-of-corpus questions | 4 of 5 | 5/5 | 5/5 | 5/5 | MET |
+| 4. Sampled chunks contain a complete thought | 4 of 5 | 5/5 | 5/5 | 5/5 | MET |
+| 5. Answer within 5 seconds | 4 of 5 | 5/5 | 5/5 | 5/5 | MET |
 
 **Did it help?**
+Yes. Reducing TOP_K from 5 to 3 did not reduce the system's performance on my 
+test set. All five in-corpus questions still retrieved the information needed 
+to answer them, all five out-of-scope questions were still refused, and every 
+response remained under five seconds. This showed that the system could 
+maintain the same measured performance while retrieving fewer chunks.
 
 <!-- Say plainly whether it did, and how you know. If it made things worse,
      say that — a change that backfired, honestly reported, earns full credit
