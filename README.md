@@ -181,6 +181,10 @@ chunks contained enough context to answer questions independently. It helped
 identify what makes a chunk too short or too broad, and I used that to choose 
 and evaluate my chunk sizes.
 
+For unit 2, I used AI to help explain some of the code in this repo especially
+in the run_eval.py file because I needed to add in the time measurement in that
+file and so I needed to understand what was going on there.
+
 <!-- ── Stretch features ─────────────────────────────────────────────────────
      Doing one? Say so here BEFORE you start. A feature this README never
      claims earns nothing.
@@ -301,6 +305,8 @@ maintain the same measured performance while retrieving fewer chunks.
 
 ## What's Still Broken
 
+All five criteria were still met after the change, so there are no failed criteria left to fix. However, the tests only use five questions, so they may not cover every type of question the system could receive. With more time, I would test the system on a larger and more varied set of questions to find cases where retrieval or generation may fail.
+
 <!-- For each criterion still missed after your fix: what you'd do about it,
      and why you stopped where you did.
 
@@ -310,6 +316,10 @@ maintain the same measured performance while retrieving fewer chunks.
      Milestone 5. -->
 
 ## What I'd Do Differently
+
+I would make criterion 1 stricter by checking whether the answer appears within the top 3 retrieved chunks instead of anywhere in the top 5. After reducing TOP_K from 5 to 3, the system still retrieved the information needed to answer all five questions, so the original criterion was easier than necessary.
+
+
 
 <!-- Knowing what you know now — which of your five criteria would you write
      differently, and why?
