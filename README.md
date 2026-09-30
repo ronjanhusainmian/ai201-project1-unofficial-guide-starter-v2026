@@ -208,11 +208,11 @@ and evaluate my chunk sizes.
 
 | Criterion | Target | Run 1 | Run 2 | Run 3 | Verdict |
 |---|---|---|---|---|---|
-| 1. Retrieved chunk contains the answer | 4 of 5 | 5/5 | 5/5 | 5/5 |  |
-| 2. Every answer names a source | 5 of 5 | 5/5 | 5/5 | 5/5 |  |
-| 3. Gate stops out-of-corpus questions | 4 of 5 | 5/5 | 5/5 | 5/5 |  |
-| 4. Sampled chunks contain a complete thought | 4 of 5 | 5/5 | 5/5 | 5/5 |  |
-| 5. Answer returned within 5 seconds | 4 of 5 | 5/5 | 5/5 | 5/5 |  |
+| 1. Retrieved chunk contains the answer | 4 of 5 | 5/5 | 5/5 | 5/5 | MET |
+| 2. Every answer names a source | 5 of 5 | 5/5 | 5/5 | 5/5 | MET |
+| 3. Gate stops out-of-corpus questions | 4 of 5 | 5/5 | 5/5 | 5/5 | MET |
+| 4. Sampled chunks contain a complete thought | 4 of 5 | 5/5 | 5/5 | 5/5 | MET |
+| 5. Answer returned within 5 seconds | 4 of 5 | 5/5 | 5/5 | 5/5 | MET |
 
 <!-- Underneath, paste the REAL output for each criterion from one of your
      runs — the actual text your system produced, not a description of it.
@@ -231,11 +231,11 @@ and evaluate my chunk sizes.
 
 | # | Criterion | Verdict | How I decided |
 |---|---|---|---|
-| 1 | Retrieved chunk contains the answer |  | All 5 questions retrieved a chunk containing the information needed to answer the question in every run. |
-| 2 | Every answer names a source |  | All 5 answers named at least one source file in every run. |
-| 3 | Gate stops out-of-corpus questions |  | The relevance gate refused all 5 out-of-corpus questions, exceeding the target of 4 out of 5. |
-| 4 | Sampled chunks contain a complete thought |  | All 5 sampled chunks could be understood on their own without needing the text before or after them. |
-| 5 | Answer returned within 5 seconds |  | All 5 questions returned an answer within 5 seconds in all three runs. The slowest response was 2.38 seconds. |
+| 1 | Retrieved chunk contains the answer | MET | All 5 questions retrieved a chunk containing the information needed to answer the question in every run. |
+| 2 | Every answer names a source | MET | All 5 answers named at least one source file in every run. |
+| 3 | Gate stops out-of-corpus questions | MET | The relevance gate refused all 5 out-of-corpus questions, exceeding the target of 4 out of 5. |
+| 4 | Sampled chunks contain a complete thought | MET | All 5 sampled chunks could be understood on their own without needing the text before or after them. |
+| 5 | Answer returned within 5 seconds | MET | All 5 questions returned an answer within 5 seconds in all three runs. The slowest response was 2.38 seconds. |
 
 ## Diagnoses
 
