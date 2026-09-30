@@ -286,7 +286,7 @@ fewer chunks.
 | 5. Answer within 5 seconds | 4 of 5 | 5/5 | 5/5 | 5/5 | MET |
 
 **Did it help?**
-Yes. Reducing TOP_K from 5 to 3 did not reduce the system's performance on my 
+Reducing TOP_K from 5 to 3 did not reduce the system's performance on my 
 test set. All five in-corpus questions still retrieved the information needed 
 to answer them, all five out-of-scope questions were still refused, and every 
 response remained under five seconds. This showed that the system could 
